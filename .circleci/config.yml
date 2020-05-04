@@ -12,7 +12,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: pytest hello_ci.py -v
+          command: |
+          pip install pytest
+          pytest hello_ci.py -v
           name: Test
 
 workflows:
