@@ -13,8 +13,8 @@ jobs:
       - python/save-cache
       - run:
           command: |
-          pip install pytest
-          pytest hello_ci.py -v
+            pip install pytest
+            pytest hello_ci.py -v
           name: Test
 
 workflows:
