@@ -13,8 +13,8 @@ jobs:
       - python/save-cache
       - run: echo pip-one
       - run: sudo pip install -r requirements.txt
-      - run: echo pip-two
-      - run: sudo pip install -r pytest
+      - run: echo pystest-one
+      - run: pytest hello_ci.py -v
 
 workflows:
   main:
