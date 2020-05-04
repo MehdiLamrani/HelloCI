@@ -11,13 +11,10 @@ jobs:
       - python/load-cache
       - python/install-deps
       - python/save-cache
-      - run:
-          command: |
-            pip3 install pytest
-            ls /home/circleci/.local/lib/python3.8/site-packages/pytest
-            echo hello
-            pytest hello_ci.py -v
-          name: Test
+      - run: echo pip-one
+      - run: sudo pip install -r requirements.txt
+      - run: echo pip-two
+      - run: sudo pip install -r pytest
 
 workflows:
   main:
